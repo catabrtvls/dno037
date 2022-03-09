@@ -14,7 +14,7 @@ html, body{
 body {
     font-family: 'Work Sans', sans-serif;
     color: #263238;
-    background: linear-gradient(#eceff1, #cfd8dc);
+    background: linear-gradient(#AFCBFF, #FFC9DE);
 }
 
 
@@ -71,14 +71,14 @@ a {
 }
 
 a:hover {
-    color: #000;
+    color: #ffffff;
     opacity: 1;
     transition: all ease .5s;
 }
 
 footer div a {
     display: block;
-    background: #90a4ae;
+    background: #c999af;
     box-shadow: 1px 1px 3px #b0bec5;
     padding: 0.5rem 1rem;
     border-radius: 1rem;
@@ -125,3 +125,4 @@ footer div#controles input[type="range"] {
     width: 4rem;
     margin: 0 0.5rem;
 }
+
