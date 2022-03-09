@@ -1,2 +1,2 @@
 # Diseño y Nuevos Medios ✨ 
-<p> hola 🐱‍🚀🐱‍👤 </p>
+<p> Hola 🐱‍🚀🐱‍👤 </p>
