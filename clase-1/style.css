@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -12,7 +12,8 @@ html, body{
 }
 
 body {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Urbanist', sans-serif;
+    font-weight:400
     color: #263238;
     background: linear-gradient(#AFCBFF, #FFC9DE);
 }
@@ -44,7 +45,7 @@ footer {
 h1 {
     line-height: 1;
     font-size: calc(2rem + 2vw);
-    font-weight: 900;
+    font-weight: 700;
     letter-spacing: 0.1rem;
     color: #37474f;
 }
@@ -125,4 +126,3 @@ footer div#controles input[type="range"] {
     width: 4rem;
     margin: 0 0.5rem;
 }
-
