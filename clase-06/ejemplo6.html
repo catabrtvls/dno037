@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="style.css"/>
+        <title>Charts.js</title>
+    </head>
+    <body>
+        <canvas id="miDona" width="100" height="100"></canvas>
+        <script>
+            async function todo() {
+                //Voy por un JSON
+                const consulta = await fetch("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson");
+                const data = await consulta.json();
+                //Declaro variables que parten en cero;
+                let si = 0;
+                let no = 0;
+                //Con un forEach reviso todo el contenido con algunas condiciones
+                data.features.forEach(t => {
+                    if(t.properties.tsunami == 1){
+                        si = si + 1;
+                    } else
+                    {
+                        no = no + 1;
+                    }
+                });
+                //Creo una variable como un arreglo vacío
+                var numeros = [];
+                //Empujo a la variable los resultados del contador
+                numeros.push(si,no);
+                var nombres = ["Con alerta de Tsunami", "Sin alerta de Tsunami"];
+                //Los colores los tomé de https://color.adobe.com/es/create/image
+                var colores = ["#E686B7", "#8E4BCC"]
+                //Ahora puedo armar el gráfico
+                new Chart(document.getElementById("miDona").getContext('2d'), {
+                    type: "doughnut",
+                    data: {
+                        labels: nombres,
+                        datasets: [{label: "Earthquakes", data: numeros, backgroundColor: colores}]
+                    }
+                });
+            }
+            todo().catch((error) => console.error(error));
+        </script>
+                <script src="script.js"></script>
+    </body>
+</html>

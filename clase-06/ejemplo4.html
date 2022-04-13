@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+          <link rel="stylesheet" href="style.css"/>
+        <title>Grafiquitos</title>
+    </head>
+    <body>
+       <canvas id="muchasBarritas" class="my-4"></canvas>
+        <script>
+            async function visualizacion() {
+                const consulta = await fetch("https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto5/TotalesNacionales.csv");
+                const data = await consulta.text();
+                const filas = data.split("\n");
+                const fechas = filas[0].split(",").slice(1);
+                const activos = filas[5].split(",").slice(1);
+                const fallecidos = filas[4].split(",").slice(1);
+                new Chart(document.querySelector("#muchasBarritas").getContext("2d"), {
+                    type: "bar",
+                    data: {
+                        labels: fechas,
+                        datasets: [
+                          { label: "Activos", data: activos,  backgroundColor: "#A9EBDD" },
+                          { label: "Fallecidos", data: fallecidos,  backgroundColor: "#DBA4B0" }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                ticks: {
+                                    callback: function (numero) {
+                                        return numero.toLocaleString("es-CL");
+                                    }
+                                }
+                            }
+                        },
+                        plugins: {
+                            title: { display: true, text: "CASOS ACTIVOS DE COVID-19 EN CHILE" },
+                        }
+                    }
+                })
+            }
+            visualizacion().catch((error) => console.error(error));
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>
