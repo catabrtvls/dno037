@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Diseño y nuevos medios, segunda versión remota" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+        <link href="style.css" rel="stylesheet" />
+        <title>Final Fantasy XIV</title>
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col text-center"><h1 class="fs-4 pt-4 text-white">Final Fantasy XIV</h1></div>
+                <div class="col text-center"><h2 class="fs-5 pt-4 text-white-50">Responsive</h2></div>
+                <div class="col text-center"><h2 class="fs-5 pt-4 text-white-50">Mobile-first</h2></div>
+            </div>
+        </header>
+        <aside class="container-fluid">
+            <div class="row pt-4 pb-5 mx-5">
+                <div class="col-sm-6 col-lg-3 p-4">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=4phUCJlomPo" rel="noopener noreferrer">
+                        <img src="images/new-uses.jpg" class="shadow img-fluid" onmousemove="primeraRevista()" onmouseleave="nada()" />
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3 p-4">
+                    <a target="_blank" href="https://cannesprlions.com/en/lionsnews/community/" rel="noopener noreferrer">
+                        <img src="images/community.jpg" class="shadow img-fluid" onmousemove="segundaRevista()" onmouseleave="nada()" />
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3 p-4">
+                    <a target="_blank" href="https://cannesprlions.com/en/lionsnews/human-power/" rel="noopener noreferrer">
+                        <img src="images/human-power.jpg" class="shadow img-fluid" onmousemove="terceraRevista()" onmouseleave="nada()" />
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3 p-4">
+                    <a target="_blank" href="https://cannesprlions.com/en/lionsnews/mismatches/" rel="noopener noreferrer">
+                        <img src="images/mismatches.jpg" class="shadow img-fluid" onmousemove="cuartaRevista()" onmouseleave="nada()" />
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <main class="container-fluid bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-10 col-sm-9 col-md-8 col-lg-7 mx-auto my-5">
+                        <p class="lead">
+                          Final Fantasy XIV es un juego del tipo MMORPG desarrollado por Square Enix, lanzado mundialmente el 2013 y dirigido por Naoki Yoshida. Desde su primera entrega, después de una versión fallida del juego que debió ser eliminada, se ha convertido en la saga Final Fantasy más rentable de Square Enix, la empresa a cargo de publicarlo. Las críticas han sido mayormente positivas, sobre todo por las historias contadas en sus cuatro expansiones principales: Heavensward (2015), Stormblood (2017), Shadowbringers (2019) y la última, de gran éxito, Endwalker (2021).
+
+                        </p>
+
+                        <p>
+                            Si bien la historia tiene un hilo conductor que se conecta a lo largo de cada entrega, cada expansión trata distintos tópicos, mostrando nuevos personajes, nuevos lugares, música y contenido que varían entre sí. Esto último ha hecho que el favoritismo por cada entrega varie en las críticas, mostrando diversas opiniones al respecto de cada expansión.
+                        </p>
+
+                        <!-- Button trigger modal -->
+
+                        <div class="btn-group w-100 mt-3" role="group" aria-label="Basic example">
+
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalUno">
+                            Ranking Metacritic
+                        </button>
+
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalDos">
+                            Ranking de Google
+                        </button>
+
+                      </div>
+
+                        <div class="row g-3 row-cols-2 row-cols-sm-3 row-cols-lg-6 my-4" id="logos"></div>
+
+                        <!-- Video -->
+<div class="ratio ratio-16x9 mb-5">
+<iframe src="https://www.youtube.com/embed/wbJDGyR0eYU" title="YouTube video" allowfullscreen></iframe>
+
+        </div>
+
+                                <!-- Carrusel -->
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade mb-4" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/hw.jpg" class="d-block w-100" alt="..." />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/hw.jpg" class="d-block w-100" alt="..." />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/shb.jpg" class="d-block w-100" alt="..." />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/ew.jpg" class="d-block w-100" alt="..." />
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+
+                        </div>
+
+                        <p class="small text-muted">
+
+  Resumir la historia de la saga es particularmente difícil, dado que cada entrega trata tópicos distintos, que lentamente se van tejiendo entre sí para dar desarrollo a una conclusión final en Endwalker bastante compleja. En esta historia, uno adopta el papel del "Warrior of Light", que en cada trailer es representado por este personaje, sin embargo, en la realidad, el rol protagónico lo toma el personaje creado por el jugador.
+
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="container">
+            <div class="row">
+                <div class="col-10 col-sm-9 col-md-8 col-lg-7 mx-auto pt-4 pb-2">
+                    <p class="text-white small d-flex justify-content-between align-items-center"><a href="#" class="link-light">Catalina Aburto</a> <a href="#" class="link-light">DNO037</a></p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalUno" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content shadow">
+                    <div class="modal-header bg-light">
+                        <h5 class="modal-title" id="exampleModalLabel">Ranking Metacritic</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Según el portal Metacritic y a partir de 28 reseñas hechos por críticos, la expansión mejor puntuada corresponde a Endwalker, lanzada el año 2021, con un puntaje de 92/100. Lo mismo sucede con los usuarios, los cuales dieron un puntaje de 9.4/10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="modalDos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content shadow">
+                  <div class="modal-header bg-light">
+                        <h5 class="modal-title" id="exampleModalLabel">Críticas de Google</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>De acuerdo a distintos usuarios de google que puntuaron el juego, los siguientes resultados indican el porcentaje de usuarios que le dieron "like" a cada expansión</p>
+                        <table class="table table-sm table-borderless align-middle">
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script>
+            function primeraRevista() {
+                document.getElementsByTagName("body")[0].style.background = "#1F3140";
+            }
+            function segundaRevista() {
+                document.getElementsByTagName("body")[0].style.background = "#BF7C63";
+            }
+            function terceraRevista() {
+                document.getElementsByTagName("body")[0].style.background = "#593657";
+            }
+            function cuartaRevista() {
+                document.getElementsByTagName("body")[0].style.background = "#275D8C";
+            }
+            function nada() {
+                document.getElementsByTagName("body")[0].style.background = "#222";
+            }
+            // Hemos usando el forEach(), que en javascript es un jovencito comparado con el for(){}
+
+
+            var datos = [
+                {nombre:"Stormblood", exito: 87},
+                {nombre:"Heavensward", exito: 92},
+                {nombre:"Tinkiwinki", exito: 96},
+                {nombre:"Dipsi", exito: 96}
+            ];
+
+            datos.forEach(x => {
+                console.log(x.nombre + " " + x.exito + "%");
+                document.getElementsByTagName("tbody")[0].innerHTML += '<tr><td class="w-25">'+x.nombre+'</td><td><div class="progress"><div class="progress-bar" role="progressbar" style="width: '+x.exito+'%;" aria-valuenow="'+x.exito+'" aria-valuemin="0" aria-valuemax="100">'+x.exito+'%</div></div></td></tr>';
+            });
+
+        </script>
+    </body>
+</html>
