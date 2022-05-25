@@ -64,7 +64,7 @@ async function users() {
             p.location.city +
             ", " +
             p.location.country +
-            " <br><i class='bi bi-envelope-heart'></i></div></div>";
+            " <br><i class='bi bi-envelope-heart fs-3'></i></div></div>";
     });
 }
 users().catch((error) => console.error(error));
